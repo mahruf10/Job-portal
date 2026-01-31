@@ -54,7 +54,7 @@ const router = createBrowserRouter([
   ,{
     path:'viewapplication/:job_id',
     element:<PrivateRoute><ViewApplications></ViewApplications></PrivateRoute>,
-    loader:({params})=>fetch(`http://localhost:3000/job-applications/jobs/${params.job_id}`)
+    loader:({params})=>fetch(`https://job-portal-server-six-theta.vercel.app/job-applications/jobs/${params.job_id}`)
   }
   ,{
     path:'myJob',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
   ,{
     path:'/jobs/:id',
     element:<PrivateRoute> <JobDetails></JobDetails> </PrivateRoute> ,
-    loader:({params})=>fetch(`http://localhost:3000/jobs/${params.id}`)
+    loader:({params})=>fetch(`https://job-portal-server-six-theta.vercel.app/jobs/${params.id}`)
   }
     ],
     

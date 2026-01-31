@@ -19,8 +19,8 @@ const Login=()=>{
      loginUser(email,password)
     .then(result=>{
       console.log(result.user);
-      // navigate(from)
-      // axios.post('http://localhost:3000/jwt',{ email },{ withCredentials:true })
+      navigate(from)
+      // axios.post('https://job-portal-server-six-theta.vercel.app/jwt',{ email },{ withCredentials:true })
       // .then(data=>{
       //   console.log(data.data)
       // })

@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './Context/AuthProvider';
-
+import { useNavigate} from 'react-router-dom';
 const SocialLogin = () => {
     const {signwithgoogle}=useContext(AuthContext)
+    const navigate=useNavigate()
 
     const handlegoogle=()=>{
      signwithgoogle()
+     navigate('/')
     }
     return (
         <div>

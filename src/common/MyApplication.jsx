@@ -1,57 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../hook/UserAuth';
-import axios from 'axios';
 import useAxiosSecure from './Context/useAxiosSecure';
 
 const MyApplication = () => {
-
-  const { User } = useAuth()
-  const [jobs, setJob] = useState([])
-  const axiosSecure=useAxiosSecure()
+  const { User, loading } = useAuth(); // ✅ এক জায়গা থেকেই নাও
+  const [jobs, setJob] = useState([]);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    // fetch(`http://localhost:3000/job-Application?email=${User.email}`)
-    // .then(res=>res.json())
-    // .then(data=>{
-    //   setJob(data)
-    // })
-    // axios.get(`http://localhost:3000/job-Application?email=${User.email}`, { withCredentials: true })
-    //   .then(res => setJob(res.data))
+    if (loading) return;          // 🔥 JWT not ready
+    if (!User?.email) return;
 
-  axiosSecure.get(`/job-Application?email=${User.email}`)
-  .then(res=>setJob(res.data))
-  }, [User.email])
-
-
+    axiosSecure
+      .get(`/job-application?email=${User.email}`)
+      .then(res => setJob(res.data))
+      .catch(err => console.log(err));
+  }, [User.email]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/job-Applications/${id}`, {
-      method: 'DELETE'
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.deletedCount) {
-          alert('Delete done')
+    axiosSecure.delete(`/job-applications/${id}`)
+      .then(res => {
+        if (res.data.deletedCount) {
+          alert('Delete done');
+          setJob(jobs.filter(job => job._id !== id));
         }
-        const current = jobs.filter(res => res._id != id)
-        setJob(current)
-      })
-  }
+      });
+  };
 
-  console.log(jobs);
   return (
     <div>
-
       <div className="overflow-x-auto md:mb-20">
         <table className="table">
-          {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>
-
-                </label>
-              </th>
+              <th></th>
               <th className='text-xl font-bold'>Name</th>
               <th className='text-xl font-bold'>Industry</th>
               <th className='text-xl font-bold'>DeadLine</th>
@@ -59,21 +41,13 @@ const MyApplication = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-            {
-              jobs.map(job => <tr key={job._id}>
-                <th>
-                  <label>
-
-                  </label>
-                </th>
+            {jobs.map(job => (
+              <tr key={job._id}>
                 <td>
                   <div className="flex items-center gap-3">
                     <div className="avatar">
                       <div className="mask mask-squircle h-12 w-12">
-                        <img
-                          src={job.company_logo}
-                          alt="Avatar Tailwind CSS Component" />
+                        <img src={job.company_logo} alt="" />
                       </div>
                     </div>
                     <div>
@@ -82,22 +56,19 @@ const MyApplication = () => {
                     </div>
                   </div>
                 </td>
-                <td>
-                  {job.company}
-                  <br />
-
-                </td>
+                <td>{job.company}</td>
                 <td className='text-red-600'>{job.applicationDeadline}</td>
-                <th>
-                  <button onClick={() => handleDelete(job._id)} className="btn btn-ghost btn-xs">Delete</button>
-                </th>
+                <td>
+                  <button
+                    onClick={() => handleDelete(job._id)}
+                    className="btn btn-ghost btn-xs"
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
-              )
-            }
-
-
+            ))}
           </tbody>
-
         </table>
       </div>
     </div>

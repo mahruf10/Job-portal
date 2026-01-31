@@ -28,14 +28,14 @@ const AuthProvider = ({children}) => {
 
  if(currentUser?.email){
   const user={email:currentUser.email}
-   axios.post('http://localhost:3000/jwt',user,{withCredentials:true})
+   axios.post('https://job-portal-server-six-theta.vercel.app/jwt',user,{withCredentials:true})
    .then(res=>{
     console.log('logged in',res.data);
     setloading(false)})
   
  }
  else{
-  axios.post('http://localhost:3000/logout',{},{withCredentials:true})
+  axios.post('https://job-portal-server-six-theta.vercel.app/logout',{},{withCredentials:true})
   .then(res=>{
     console.log('logout',res.data);
      setloading(false)
@@ -47,6 +47,33 @@ const AuthProvider = ({children}) => {
    unsubscribe ();
    }
   },[])
+// useEffect(() => {
+//   const unsubscribe = onAuthStateChanged(auth, async currentUser => {
+//     setUser(currentUser);
+
+//     if (currentUser?.email) {
+//       try {
+//         await axios.post(
+//           'https://job-portal-server-six-theta.vercel.app/jwt',
+//           { email: currentUser.email },
+//           { withCredentials: true }
+//         );
+//       } finally {
+//         setloading(false); // 🔥 JWT set হওয়ার পর
+//       }
+//     } else {
+//       await axios.post(
+//         'https://job-portal-server-six-theta.vercel.app/logout',
+//         {},
+//         { withCredentials: true }
+//       );
+//       setloading(false);
+//     }
+//   });
+
+//   return () => unsubscribe();
+// }, []);
+
    
     const AuthInfo={
     User,

@@ -16,7 +16,7 @@ const Header = () => {
 
     <motion.img
       src={img_2}
-      animate={{x:[100,150,100]}}
+      animate={{x:[80,150,80]}}
       transition={{duration:10,repeat:Infinity}}
       className="max-w-sm  w-55 rounded-t-[30px] rounded-br-[30px] border-l-4 border-b-4 border-blue-500 shadow-2xl"
     />

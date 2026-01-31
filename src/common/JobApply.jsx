@@ -10,7 +10,7 @@ const JobApply = () => {
      const [company,setcompany]=useState()
    
      useEffect(()=>{
-      fetch(`http://localhost:3000/jobs/${id}`)
+      fetch(`https://job-portal-server-six-theta.vercel.app/jobs/${id}`)
       .then(res=>res.json())
       .then(data=>
       setcompany(data.company)
@@ -33,7 +33,7 @@ const JobApply = () => {
        github,
        company:company
   }
-        fetch('http://localhost:3000/job-Applications',{
+        fetch('https://job-portal-server-six-theta.vercel.app/job-Applications',{
             method:'POST',
             headers:{
                 'content-type':'application/json',

@@ -13,7 +13,7 @@ const CarthotJobs = ({jobs}) => {
  
   return (
         <div>
-           <div className="card bg-base-100 shadow-sm h-full">
+           <div key={_id} className="card bg-base-100 shadow-sm h-full">
      <div className='flex gap-2'>
 <figure>
     <img
