@@ -14,23 +14,23 @@ const JobDetails = () => {
     console.log(data);
    const leftColumn = [
     {
-      label: "Industry",
+      label: "INDUSTRY",
       value: data.company,
       icon: <FaIndustry />,
     },
     {
-      label: "Salary",
+      label: "SALARY",
       value: `${data.salaryRange.min} - ${data.salaryRange.max} ${data.salaryRange.currency}`,
       icon: <FaDollarSign />,
     },
   
     {
-      label: "Job type",
+      label: "JOB TYPE",
       value: data.jobType,
       icon: <FaBriefcase />,
     },
     {
-      label: "responsibilities",
+      label: "RESPONSIBILITES",
       value: data.responsibilities.map(res=><p>{res}</p>),
       icon: <FaClock />,
     },
@@ -38,22 +38,22 @@ const JobDetails = () => {
 
   const rightColumn = [
     {
-      label: "Requirements",
+      label: "REQUIREMENTS",
       value: data.requirements.map(job=><p> {job}</p>),
       icon: <FaUserTie />,
     },
     {
-      label: "Hr_Email",
+      label: "HR_EMAIL",
       value: data.hr_email,
       icon: <FaUserTie />,
     },
     {
-      label: "Deadline",
+      label: "DEADLINE",
       value: data.applicationDeadline,
       icon: <FaCalendarAlt />,
     },
     {
-      label: "Location",
+      label: "LOCATION",
       value: data.location,
       icon: <FaMapMarkerAlt />,
     },

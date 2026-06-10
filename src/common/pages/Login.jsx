@@ -25,7 +25,12 @@ const Login=()=>{
       //   console.log(data.data)
       // })
     })
-    .catch(error=>console.log(error.message))
+    .catch(error=>{
+       console.log(error.message)
+       alert('email or password,somethings went wrong')
+    }
+     
+  )
   }
 return (
    <div>
@@ -41,7 +46,7 @@ return (
       <div className="card-body">
       <div className="card-body">
         <form onSubmit={handleform} className="fieldset">
-            <h1 className="text-5xl font-bold p-2 ml-10">Login now!</h1>
+            <h1 className="text-3xl font-bold p-2 ml-10">Login now!</h1>
           <label className="label">Email</label>
           <input name='email' type="email" className="input" placeholder="Email" />
           <label className="label">Password</label>

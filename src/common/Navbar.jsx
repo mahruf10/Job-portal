@@ -17,10 +17,10 @@ const Navbar = () => {
    }
     const links=
         <>
-       <NavLink to={'/'} className={({isActive})=>isActive ? 'bg-gray-500 rounded xl ':''}> <li>Home </li></NavLink>
-       <NavLink to={'/my-application'} className={({isActive})=>isActive ? 'bg-gray-500 rounded-[5px]':''}> <li>My Application </li></NavLink>
-       <NavLink to={'/addJob'} className={({isActive})=>isActive ? 'bg-gray-500 rounded-[5px]':''}> <li>Add a Job </li></NavLink>
-       <NavLink to={'/myJob'} className={({isActive})=>isActive ? 'bg-gray-500 rounded-[5px]':''}> <li>My Job </li></NavLink>
+       <NavLink to={'/'}> <li>Home </li></NavLink>
+       <NavLink to={'/my-application'} className={({isActive})=>isActive ? 'text-blue-400 rounded-[5px] ':''}> <li>My Application </li></NavLink>
+       <NavLink to={'/addJob'} className={({isActive})=>isActive ? 'text-blue-400 rounded-[5px]':''}> <li>Add a Job </li></NavLink>
+       <NavLink to={'/myJob'} className={({isActive})=>isActive ? 'text-blue-400 rounded-[5px]':''}> <li>My Job </li></NavLink>
        
         </>
          

@@ -15,7 +15,7 @@ const JobApply = () => {
       .then(data=>
       setcompany(data.company)
       )
-     },[])
+     },[id])
    
     const handleapplyform=e=>{
        
@@ -52,7 +52,7 @@ const JobApply = () => {
     
     <div className="card bg-base-100 mx-auto shadow-2xl w-3/4">
       <div className="card-body">
-        <h1 className="text-4xl font-bold text-center">Apply now & get Your favourite Job!!</h1>
+        <h1 className="text-2xl font-bold text-center">Apply now & get Your favourite Job!!</h1>
         <form onSubmit={handleapplyform} className="fieldset ">
              
           <label className="label">LinkedIn</label>
