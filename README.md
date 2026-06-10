@@ -56,41 +56,6 @@ https://job-portal-4909c.web.app
 
 ---
 
-## 📁 Project Structure
-
-```
-src/
-├── assets/                  # Images, animations, icons
-├── common/
-│   ├── Context/
-│   │   ├── AuthProvider.jsx      # Firebase auth context + JWT management
-│   │   └── useAxiosSecure.jsx    # Axios instance with auth interceptors
-│   ├── pages/
-│   │   ├── Login.jsx
-│   │   └── Register.jsx
-│   ├── CarthotJobs.jsx           # Job card component
-│   ├── CategorySection.jsx       # Browse by category
-│   ├── JobApply.jsx              # Job application form
-│   ├── JobDetails.jsx            # Full job detail view
-│   ├── MyApplication.jsx         # Applicant's submitted applications
-│   ├── Myjob.jsx                 # Employer's posted jobs
-│   ├── Navbar.jsx
-│   ├── PrivateRoute.jsx          # Auth guard component
-│   ├── SocialLogin.jsx           # Google login button
-│   └── ViewApplications.jsx      # Employer views applicants
-├── hook/
-│   └── UserAuth.jsx              # useAuth custom hook
-├── layout/
-│   └── MainLayout.jsx
-├── AddJob.jsx                    # Post a new job
-├── Footer.jsx
-├── Header.jsx                    # Animated hero section
-├── Home.jsx
-├── HotJobs.jsx                   # All jobs listing
-└── main.jsx                      # Router + root setup
-```
-
----
 
 ## 🚀 Getting Started
 
@@ -115,19 +80,6 @@ cp .env.example .env.local
 # Fill in your Firebase config keys
 ```
 
-### Environment Variables
-
-Create a `.env.local` file in the root:
-
-```env
-VITE_API_KEY=your_firebase_api_key
-VITE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_PROJECT_ID=your_project_id
-VITE_STORAGE_BUCKET=your_project.appspot.com
-VITE_MESSAGING_SENDER_ID=your_sender_id
-VITE_APP_ID=your_app_id
-```
-
 ### Run Locally
 
 ```bash
@@ -138,21 +90,6 @@ The app will be available at `http://localhost:5173`
 
 ---
 
-## 🔗 API Endpoints (Backend)
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/jobs` | Get all jobs (filter by `?email=`) |
-| `GET` | `/jobs/:id` | Get single job |
-| `POST` | `/jobs` | Post a new job |
-| `GET` | `/job-application?email=` | Get user's applications |
-| `POST` | `/job-applications` | Submit a job application |
-| `DELETE` | `/job-applications/:id` | Delete an application |
-| `GET` | `/job-applications/jobs/:job_id` | Get all applicants for a job |
-| `POST` | `/jwt` | Issue JWT cookie |
-| `POST` | `/logout` | Clear JWT cookie |
-
----
 
 ## 🔐 Security
 
@@ -166,11 +103,8 @@ The app will be available at `http://localhost:5173`
 ## 🐛 Known Issues / TODO
 
 - [ ] Add profile picture upload on registration
-- [ ] Add job search/filter by keyword or location
 - [ ] Improve loading state UX (skeleton loaders)
-- [ ] Add pagination to job listings
 - [ ] Email notifications on application status change
-- [ ] Admin dashboard
 
 ---
 
