@@ -12,7 +12,9 @@ https://job-portal-4909c.web.app
 
 ## 📸 Screenshots
 
-> _(Add screenshots of Home, HotJobs, Job Details, and Dashboard pages here)_
+![Home Page](src/assets/screenshots/home.png)
+![Hot Jobs](src/assets/screenshots/hotjobs.png)
+![Job Details](src/assets/screenshots/details.png)
 
 ---
 
