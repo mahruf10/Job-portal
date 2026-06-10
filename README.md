@@ -6,7 +6,7 @@ A modern, full-featured job portal built with **React**, **Firebase Authenticati
 
 ## 🌐 Live Demo
 
-> 🔗 [Coming Soon / Add your deployed URL here]
+https://job-portal-4909c.web.app
 
 ---
 
