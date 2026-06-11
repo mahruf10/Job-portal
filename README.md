@@ -28,7 +28,6 @@ https://job-portal-4909c.web.app
 
 ### 🔍 Job Seeker
 - Browse all hot/featured jobs
-- Filter jobs by category
 - View detailed job info (salary, type, location, responsibilities, requirements)
 - Apply with LinkedIn, GitHub, and Resume URL
 - Track and manage submitted applications (with delete)
@@ -100,7 +99,7 @@ The app will be available at `http://localhost:5173`
 
 ---
 
-## 🐛 Known Issues / TODO
+##  Known Issues / TODO
 
 - [ ] Add profile picture upload on registration
 - [ ] Improve loading state UX (skeleton loaders)
