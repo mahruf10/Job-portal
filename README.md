@@ -4,13 +4,13 @@ A modern, full-featured job portal built with **React**, **Firebase Authenticati
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 https://job-portal-4909c.web.app
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ![Home Page](./src/assets/screenshots/home.png)
 ![Hot Jobs](./src/assets/screenshots/hotjobs.png)
@@ -18,21 +18,21 @@ https://job-portal-4909c.web.app
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👤 Authentication
+###  Authentication
 - Email & Password Registration / Login
 - Google Sign-In via Firebase
 - JWT-based session management with HTTP-only cookies
 - Protected routes with auto-redirect on 401/403
 
-### 🔍 Job Seeker
+### Job Seeker
 - Browse all hot/featured jobs
 - View detailed job info (salary, type, location, responsibilities, requirements)
 - Apply with LinkedIn, GitHub, and Resume URL
 - Track and manage submitted applications (with delete)
 
-### 🏢 Employer
+### Employer
 - Post new job listings with full details
 - View all self-posted jobs
 - See application count per job
@@ -40,7 +40,7 @@ https://job-portal-4909c.web.app
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technologies |
 |---|---|
@@ -56,7 +56,7 @@ https://job-portal-4909c.web.app
 ---
 
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js v18+
@@ -90,7 +90,7 @@ The app will be available at `http://localhost:5173`
 ---
 
 
-## 🔐 Security
+##  Security
 
 - JWT tokens stored in **HTTP-only cookies** (not localStorage)
 - Axios interceptor auto-logs out on `401`/`403` responses
