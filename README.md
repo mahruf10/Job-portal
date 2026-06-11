@@ -107,19 +107,19 @@ The app will be available at `http://localhost:5173`
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Your Name**
 - GitHub: [@your-username](https://github.com/your-username)
