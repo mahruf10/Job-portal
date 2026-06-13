@@ -35,7 +35,6 @@ https://job-portal-4909c.web.app
 ### Employer
 - Post new job listings with full details
 - View all self-posted jobs
-- See application count per job
 - Review all applicants for a specific job
 
 ---
@@ -68,7 +67,7 @@ https://job-portal-4909c.web.app
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/job-portal-client.git
+git clone https://github.com/mahruf10/job-portal-client.git
 cd job-portal-client
 
 # 2. Install dependencies
@@ -99,14 +98,6 @@ The app will be available at `http://localhost:5173`
 
 ---
 
-##  Known Issues / TODO
-
-- [ ] Add profile picture upload on registration
-- [ ] Improve loading state UX (skeleton loaders)
-- [ ] Email notifications on application status change
-
----
-
 ##  Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
@@ -121,6 +112,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ##  Author
 
-**Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
+**MAHRUF**
+- GitHub: [@mahruf10](https://github.com/mahruf10)
+- LinkedIn: [mahruf](https://linkedin.com/in/your-linkedin)
